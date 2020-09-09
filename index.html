@@ -1,0 +1,212 @@
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>RND use Tailwind framework</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <link href="tailwind.min.css" rel="stylesheet">
+  </head>
+<body>
+
+<div class = "mine max-w-6xl mx-auto bg-blue-100">
+  <div class = "description text-2xl text-center font-bold bg-green-200">
+    <p>случайный генератор всего <sup>use Tailwind framework</sup></p>
+  </div>
+  <div class = "main_text my-3">
+    <p>RND нескольких видов, разные группы - разные rnd. Генерит из интервала от мин до макс, генерит случайный выбор из массива,
+      генерит выбор из двух символов, генерит выбор из числа - переводит в строку и если длина =1 - вперед добавляет ноль 
+      и получается 08 например, если длина = 2 - ничего не добавляет.
+    </p>
+  </div>
+  <div class = "formula_description my-3 text-center font-bold">
+    <p>WE596.(?)<sup>*1</sup>.(?)<sup>*2</sup>-68(?)<sup>*3</sup>00(?)<sup>*4</sup>(?)<sup>*5</sup>-(??)<sup>*6</sup>
+    </p>
+  </div>
+  <div class = "clear-both"></div>
+  <div class = "table_block -space-x-px h-auto">
+    <div class = "clear-both"></div>
+    <div class = "table_block_1 float-left h-auto w-1/6 p-1">
+        <p><i>*1 = модификация первая, выбор из массива:</i></p>
+        <p>-без индекса = генерит пробел;</p>
+        <p>1 -индекс = 1;</p>
+        <p>2 -индекс = 2;</p>
+        <p>3 -индекс = 3;</p>
+        <p>4 -индекс = 4;</p>
+        <p>7 -индекс = 7, да, да именно 7, 5 и 6 не учавствуют</p>
+    </div>
+    <div class = "table_block_2 float-left h-full w-1/6 p-1">
+        <p><i>*2 = модификация вторая:</i></p>
+        <p>-без индекса = генерит пробел;</p>
+        <p>P - генерит букву P</p>
+    </div> 
+    <div class = "table_block_3 float-left h-64 w-1/6 p-1">
+        <p><i>*3 = модификация третья, выбор из 3 чисел:</i></p>
+        <p>3 - индекс = 3;</p>
+        <p>4 - индекс = 4;</p>
+        <p>5 - индекс = 5</p>
+    </div>
+    <div class = "table_block_4 float-left h-64 w-1/6 p-1">
+        <p><i>*4 = модификация четвертая - просто числа:</i></p>
+        <p>1 - индекс = 1</p>
+        <p>2 - индекс = 2</p>
+        <p>3 - индекс = 3</p>
+        <p>4 - индекс = 4</p>
+        <p>5 - индекс = 5</p>
+        <p>6 - индекс = 6</p>
+    </div>
+    <div class = "table_block_5 float-left h-64 w-1/6 p-1">
+        <p><i>*5 = модификация пятая: 0 или 1</i></p>
+        <p>0 - индекс = 0</p>
+        <p>1 - индекс = 1</p>
+    </div>
+    <div class = "table_block_6 float-left h-64 w-1/6 p-1">
+        <p><i>*6 = модификация с проверкой длины строки:</i></p>
+        <p>?? - если длина один символ - приставляем в начало ноль.</p>
+    </div>
+    <div class = "clear-both"></div>
+    <div class = "table_button_block h-10 items-center content-between space-x-10 p-2 flex-wrap items-stretch bg-yellow-200">
+      <div class = "table_button_blk_for_btn_1 float-left">
+        <input type="button" class="table_btn_1 bg-blue-500 hover:bg-blue-700 text-white w-32 border border-red-400"
+          id="table_btn_1" value="генерировать" onclick="gen_table_1()">
+      </div>
+      <div class = "table_button_blk_for_btn_2 float-left">
+        <input type="button" class="table_btn_2 bg-blue-500 hover:bg-blue-700 text-white w-32 border border-red-400 mx-5"
+          id="table_btn_2" value="генерировать" onclick="gen_table_2()">
+      </div>
+      <div class = "table_button_blk_for_btn_3 float-left">
+        <input type="button" class="table_btn_3 bg-blue-500 hover:bg-blue-700 text-white w-32 border border-red-400 mx-1"
+          id="table_btn_3" value="генерировать" onclick="gen_table_3()">
+      </div>
+      <div class = "table_button_blk_for_btn_4 float-left">
+        <input type="button" class="table_btn_4 bg-blue-500 hover:bg-blue-700 text-white w-32 border border-red-400 mx-3"
+          id="table_btn_4" value="генерировать" onclick="gen_table_4()">
+      </div>
+      <div class = "table_button_blk_for_btn_5 float-left">
+        <input type="button" class="table_btn_5 bg-blue-500 hover:bg-blue-700 text-white w-32 border border-red-400 mx-5"
+          id="table_btn_5" value="генерировать" onclick="gen_table_5()">
+      </div>
+      <div class = "table_button_blk_for_btn_6 float-left">
+        <input type="button" class="table_btn_6 bg-blue-500 hover:bg-blue-700 text-white w-32 border border-red-400 mx-3"
+          id="table_btn_6" value="генерировать" onclick="gen_table_6()">
+      </div>
+    </div>
+    <div class = "clear-both"></div>
+  </div>
+  <div class = "clear-both">
+  </div>
+  <div class = "formula_block">
+    <div class = "formula_body_block m-2">
+      <input type="text" class="formula_block_body_1 border border-red-400 bg-yellow-200 text-center"
+        id="formula_block_1" size="3" readonly maxlength="3" placeholder="1" value="WE596">
+      <input type="text" class="formula_block_body_2 border border-red-400 bg-yellow-200 text-center"
+        id="formula_block_2" size="1" readonly maxlength="1">
+      <input type="text" class="formula_block_body_3 border border-red-400 bg-yellow-200 text-center"
+        id="formula_block_3" size="1" readonly maxlength="1">
+      <input type="text" class="formula_block_body_4 border border-red-400 bg-yellow-200 text-center"
+        id="formula_block_4" size="3" readonly maxlength="3" value="-34">
+      <input type="text" class="formula_block_body_5 border border-red-400 bg-yellow-200 text-center"
+        id="formula_block_5" size="1" readonly maxlength="1">
+      <input type="text" class="formula_block_body_6 border border-red-400 bg-yellow-200 text-center"
+        id="formula_block_6" size="1" readonly maxlength="2" value="00">
+      <input type="text" class="formula_block_body_7 border border-red-400 bg-yellow-200 text-center"
+        id="formula_block_7" size="1" readonly maxlength="1">
+      <input type="text" class="formula_block_body_8 border border-red-400 bg-yellow-200 text-center"
+        id="formula_block_8" size="1" readonly maxlength="1">
+      <input type="text" class="formula_block_body_9 border border-red-400 bg-yellow-200 text-center"
+        id="formula_block_9" size="1" readonly maxlength="1" value="-">
+      <input type="text" class="formula_block_body_10 border border-red-400 bg-yellow-200 text-center"
+        id="formula_block_10" size="2" readonly maxlength="2">
+    </div>
+    <div class = "generate_all_field">
+      <input type="button" class="generate_all bg-blue-200 hover:bg-blue-300 h-10 w-64 border border-red-400"
+        id="generate_all" value="генерировать все значения" onclick="gen_all()">
+      <input type="button" class="get_final_formula bg-blue-200 hover:bg-blue-300 h-10 w-64 border border-red-400"
+        id="get_final_formula" value="получить финальное значение" onclick="get_final_formula()">
+    </div>
+    <div class = "output_formula">
+        <p>полученное значение:</p>
+        <input type="text" class="output_formula_field border border-red-400 w-48 bg-yellow-200"
+        id="output_formula_field" size="17" readonly maxlength="17">
+    </div>
+  </div>
+</div>
+
+<script>
+      function getRandomInRange(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      function getRandomIndex () {
+        var numPool = [ ' ', 1, 2, 3, 4, 7 ],
+        rand = numPool[Math.floor(Math.random() * numPool.length)];
+        return rand;
+      }
+
+      function getRandomBelt () {
+        var numPool = [ ' ', 'P' ],
+        rand = numPool[Math.floor(Math.random() * numPool.length)];
+        return rand;
+      }
+
+      function getRandom_last_99range(min, max) {
+      midChar = Math.floor(Math.random() * (max - min + 1)) + min;
+        midStringChar = String(midChar);
+        if (midStringChar.length < 2) {
+          midChar = '0' + midChar;
+        }
+      return midChar;
+      }
+
+  function gen_table_1() {
+    document.getElementById('formula_block_2').value = getRandomIndex();
+  }
+
+  function gen_table_2() {
+    document.getElementById('formula_block_3').value = getRandomBelt();
+  }
+
+  function gen_table_3() {
+    document.getElementById('formula_block_5').value = getRandomInRange(3, 5);
+  }
+
+  function gen_table_4() {
+    document.getElementById('formula_block_7').value = getRandomInRange(1, 6);
+  }
+
+  function gen_table_5() {
+    document.getElementById('formula_block_8').value = getRandomInRange(0, 1);
+  }
+
+  function gen_table_6() {
+    document.getElementById('formula_block_10').value = getRandom_last_99range(0, 99);
+  }
+
+  function gen_all() {
+    document.getElementById('formula_block_2').value = getRandomIndex();
+    document.getElementById('formula_block_3').value = getRandomBelt();
+    document.getElementById('formula_block_5').value = getRandomInRange(3, 5);
+    document.getElementById('formula_block_7').value = getRandomInRange(1, 6);
+    document.getElementById('formula_block_8').value = getRandomInRange(0, 1);
+    document.getElementById('formula_block_10').value = getRandom_last_99range(0, 99);
+  }
+
+  function get_final_formula() {
+    let finalForm_dot = '.';
+    let ff = 
+    document.getElementById('formula_block_1').value + finalForm_dot +
+    document.getElementById('formula_block_2').value + finalForm_dot +
+    document.getElementById('formula_block_3').value + 
+    document.getElementById('formula_block_4').value + 
+    document.getElementById('formula_block_5').value + 
+    document.getElementById('formula_block_6').value + 
+    document.getElementById('formula_block_7').value + 
+    document.getElementById('formula_block_8').value + 
+    document.getElementById('formula_block_9').value + 
+    document.getElementById('formula_block_10').value;
+
+    document.getElementById('output_formula_field').value = ff;
+  }
+</script>
+
+</body> 
+</html>
